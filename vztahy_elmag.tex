@@ -1,0 +1,67 @@
+\chapter{Základní vztahy z teorie elektromagnetického pole}
+\label{zakladni_vztahy_z_teorie_elektromagnetickeho_pole}
+\section{Maxwellovy rovnice v diferenciálním tvaru}
+Maxwellovy rovnice jsou základní zákony teorie elektromagnetického pole, ze kterých ostatní rovnice pro popis elektromagnetického pole přímo nebo nepřímo plynou. Maxwellovy rovnice v diferenciálním tvaru platí pouze v regulárních bodech, ve kterých jsou spojité a spojitě diferencovatelné.
+
+\begin{equation}
+	\rot \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t}
+	\label{prvni_maxwellova_rovnice}
+\end{equation}
+
+\begin{equation}
+	\rot \vec{E} = - \frac{\partial \vec{B}}{\partial t}
+	\label{druha_maxwellova_rovnice}
+\end{equation}
+
+\begin{equation}
+	\rot \vec{D} = - \rho
+	\label{treti_maxwellova_rovnice}
+\end{equation}
+
+\begin{equation}
+	\rot \vec{B} = 0
+	\label{ctvrta_maxwellova_rovnice}
+\end{equation}
+
+Veličiny objevující se v Maxwellových rovnicích jsou intenzita magnetického pole \vec{H}, proudová hustota \vec{J}, elektrická indukce \vec{D},intenzita elektrického pole \vec{E}, magnetická indukce \vec{B}  a $\rho$ je objemová hustota náboje.
+	V případě, že se jedná o elektromagnetické pole stacionární, budou časové parciální derivace nulové.
+	
+\section{Konstitutivní (materiálové) vztahy}
+Z důvodu více prostředí, ve kterých se elektromagnetické pole zkoumá, nestačí pouze magnetická indukce \vec{B} a intenzita elektrického pole \vec{E}. Je zapotřebí zavést další veličiny, které budou mít stejný smysl jako veličiny \vec{B} a \vec{E}, ale budou respektovat také vlastnosti prostředí. Ve vakuu stačí vektory \vec{B} a \vec{E}.
+
+\begin{equation}
+	\vec{B} = \mu \vec{H} 
+	\label{permeabilita}
+\end{equation}
+
+\begin{equation}
+	\vec{D} = \epsilon \vec{E}
+	\label{epsilon}
+\end{equation}
+
+\begin{equation}
+	\vec{J} =  \gamma \vec{E}
+	\label{gama}
+\end{equation}
+
+\section{Odvození magnetického vektorového potenciálu}
+Stejně jako u pole elektrostatického, i pole magnetického lze a je výhodné zavést potenciál. Narozdíl od elektrostatického pole jde o pole nezřídlové, vírové, proto magnetický potenciál nebudu skalární veličina, ale vektorová veličina. Zavedení vektorového magnetického potenciálu využívá vektorové identity(z vektorové analýzy), tedy $\nabla \cdot (\nabla x \vec{G})=0$, kde \vec{G} je obecné vektorové pole. Lze tedy zapsat rovnici (\ref{ctvrta_maxwellova_rovnice}) ve tvaru:
+
+\begin{equation}
+	\div \vec{B} =  \div \rot \vec{A}
+	\label{odvozeni_potencial}
+\end{equation}
+
+Odstraněním divergence lze tuto rovnici zapsat ve tvaru:
+
+\begin{equation}
+	\vec{B} =  \rot \vec{A}
+	\label{magneticky_vektorovy_potencial}
+\end{equation}
+
+Vektorový magnetický potenciál $\vec{A}$ je jednoznačně určený svojí rovnicí, až na gradient libovolné funkce, jelikož platí $\rot \grad f \equiv 0$. Z tohjo plyne, že aby rovnice mezi vektorovým magnetickým potenciálem $\vec{A}$ a magnetickou indukcí $\vec{B}$ opravdu platil, musíme definovat podmínku, která omezí výskyt daného gradientu libovolné funkce. Tato podmínka se jmenuje Coulombova kalibrační podmínka a je ve znění:
+
+\begin{equation}
+	\div \vec{A} =  0
+	\label{coulombova_kalibracni_podminka}
+\end{equation}

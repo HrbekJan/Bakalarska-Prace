@@ -1,0 +1,79 @@
+\chapter{Matematický model} 
+\label{matematicky_model}
+V této kapitole je uveden a vysvětlen obecný matematický model vzduchových tlumivek protékaných střídavým proudem. Tento model popisuje sdruženou úlohu, tedy úlohu řešící dvě fyzikální pole a to pole magnetické a pole teplotní. Proto je tato kapitola rozdělena do dvou částí, pro magnetické pole a pro teplotní pole.
+
+\section{Model magnetického pole}
+Model magnetického pole je odvozen z Maxwellových rovnic pro stacionární pole a následnou úpravou je převeden pro použití v nestacionárním magnetické poli.
+
+	Zákon celkového proudu (zobecněný Amperův zákon) neboli první Maxwellova rovnice v diferenciálním tvaru ve znění:
+	
+\begin{equation}
+	\rot \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t}
+\end{equation}
+
+kde \vec{H} je vektor intenzity magnetického pole, \vec{J} je vektor proudové hustoty a $\frac{\partial \vec{D}}{\partial t}$ je hustota posuvného proudu. Hustotu posuvného proudu lze zanedbat, z důvodu málé frekvence, s kterou vzduchové tlumivky pracují.
+Po zanedbání posuvného proudu rovnice vypadá takto:
+
+\begin{equation}
+	\rot \vec{H} = \vec{J}
+\end{equation}
+
+Dalším krokem je dosazení za intenzitu magnetického pole \vec{H} ze vztahu mezi \vec{H} a magnetickou indukcí \vec{B} (\ref{permeabilita}), tím se ze vztahu (2.2) vznikne vztah ve tvaru:
+
+\begin{equation}
+	\rot \frac{\vec{B}}{\mu} = \vec{J}
+\end{equation}
+
+Jelikož cílem odvozování matematického modelu problému je převedení veličin charakteristických pro elektromagnetické pole na potenciály, v tomto případě na vektorový magnetický potenciál, byl použit vztah mezi \vec{B} a \vec{A}(\ref{magneticky_vektorovy_potencial}), tím se rovnice upraví na tvar:
+
+\begin{equation}
+ \rot (\frac{1}{\mu} {rot \vec{A}}) = \vec{J}
+\end{equation}
+
+Do tohoto momentu byl odvozován matematický model z 1. Maxwellovy rovnice, dále bude odvozována část z 2. Maxwellovy rovnice.
+	
+	Faradayův indukční zákon neboli druhá Maxwellova rovnice v diferenciálním tvaru ve znění:
+
+\begin{equation}
+	\rot \vec{E} = - \frac{\partial \vec{B}}{\partial t}
+\end{equation}
+
+kde \vec{E} je intenzita elektrického pole. Opět je cílem převést z veličin charakteristických pro elektromagnetické pole na vektorový magnetický potenciál, proto je opět použit vztah (\ref{magneticky_vektorovy_potencial}) a tímto dojde ke změně tvaru rovnice:
+
+\begin{equation}
+	\rot \vec{E} = - \frac{\partial\rot\vec{A}}{\partial t}
+\end{equation}
+
+Ten lze upravit na tvar:
+
+\begin{equation}
+	\rot \vec{E} = - \rot \frac{\partial\vec{A}}{\partial t}
+\end{equation}
+
+Odstraněním operátoru rotace vznikne konečný tvar rovnice pro intenzitu elektrického pole:
+
+\begin{equation}
+	\vec{E} = - \frac{\partial \vec{A}}{\partial t} - \grad{\varphi}
+\end{equation}
+
+Dosazením ze konstitutivního vztahu pro proudovou hustotu \vec{J} a intenzitu elektrického pole \vec{E} (\ref{gama}) do rovnice (2.8), lze tuto rovnici zapsat:
+
+\begin{equation}
+	\vec{J} = - \gamma \frac{\partial \vec{A}}{\partial t} - \gamma \grad{\varphi}
+\end{equation}
+
+kde $\gamma$ je konduktivita. V této chvíli lze rovnice (2.4) a (2.9) spojit, vznikne jedna rovnice ve tvaru:
+
+\begin{equation}
+	\rot (\frac{1}{\mu} {rot \vec{A}}) = - \gamma \frac{\partial \vec{A}}{\partial t} - \gamma \grad{\varphi}
+\end{equation}
+
+Dále lze provést úprava podle vztahu (číslo v příloze):
+
+\begin{equation}
+	\rot (\frac{1}{\mu} {rot \vec{A}}) = - \gamma \frac{\partial \vec{A}}{\partial t} - \vec{J_ext}
+\end{equation}
+
+
+
+
