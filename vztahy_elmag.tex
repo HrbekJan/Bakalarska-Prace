@@ -65,3 +65,34 @@ Vektorový magnetický potenciál $\vec{A}$ je jednoznačně určený svojí rov
 	\div \vec{A} =  0
 	\label{coulombova_kalibracni_podminka}
 \end{equation}
+
+\section{Odvození skalárního elektrického potenciálu}
+Pro odvození vztahu pro elektrický potenciál se vychází z 2.Maxwellovy rovnice v diferenciálním tvaru pro elektrostatické pole.
+
+\begin{equation}
+	\rot \vec{E} =  0
+	\label{druha_maxwellova_rovnice_elektrostaticke}
+\end{equation}
+
+Dále vyplývá z rovnice (\ref{druha_maxwellova_rovnice_elektrostaticke}), že elektrostatické pole ve svých regulárních bodech  je nevírové(potenciální). Z vektorové analýzy je pro tento stav známo, že:
+
+\begin{equation}
+	\rot \grad \varphi =  0
+	\label{rotace_gradientu_potencialu}
+\end{equation}
+
+kde $\varphi$ je skalární spojitá funkce. Obě rovnice se rovnají nule, tedy rovnají se i sobě a lze napsat:
+
+\begin{equation}
+	\rot \vec{E} =  \rot \grad \varphi
+	\label{druha_maxwellova_rovnice_potencial}
+\end{equation}
+
+Po odstranění rotace dostáváme rovnici ve tvaru:
+
+\begin{equation}
+	\vec{E} =  - \grad \varphi
+	\label{intenzita_potencial}
+\end{equation}
+
+Toto je výhodné, protože lze počítat se skalárním potenciálem a nikoliv s vektorem intenzity elektrického pole. V rovnici (\ref{intenzita_potencial}) může být zarážející znaménko minus před pravou stranou rovnice. Toto je zde správně, z matematického hlediska je gradient potenciálu vektor, udávající směr největšího nárůstu. Ovšem z fyzikálního hlediska je dokázáno, že vektor intenzity elektrického pole má směr od vyššího potenciálu k nižšímu. Toho se docílí již zmíněným znaménkem minus.  
