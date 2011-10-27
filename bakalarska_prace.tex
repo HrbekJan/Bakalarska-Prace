@@ -1,13 +1,25 @@
 \documentclass[a4paper, oneside, 11pt]{book}
+\usepackage[czech]{babel} 
 \usepackage[utf8]{inputenc}
-\usepackage[czech]{babel}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{graphicx}
+\usepackage{cite} 
+
+\input{mathdef}
+
 \pdfinfo
 {	/Rozložení magnetického pole v okolí vzduchových tlumivek)
 	/Author (Hrbek Jan)   }
+	
 \begin{document}
+\input{titulni_strana}
+\tableofcontents
 \input{uvod}
+\input{matematicky_model}
+
+
+\appendix
+\input{vztahy_elmag}
 \end{document}
