@@ -1,0 +1,6 @@
+Dekompenzační tlumivka 77,9 A; 27,5 kV; 1124 mH; 1045 kg
+
+Základní rozměry:
+Výška: 1775 mm
+Šířka: 1340 mm
+Délka: 1340 mm
