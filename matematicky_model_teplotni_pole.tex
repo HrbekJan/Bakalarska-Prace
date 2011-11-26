@@ -2,7 +2,22 @@
 Teplo se v tomto problému šíří vedením, proto je pro popis teplotního pole použita rovnice pro vedení tepla neboli Fourier-Kirchhoffova rovnice. Tu lze zapsat ve tvaru:
 
 \begin{equation}
-	\div (\lambda \grad T) = \rho c \frac{dT}{dt} - p_J  
+	\div ( \lambda \grad T) = \rho c \frac{dT}{dt} - p_J 
+	\label{fourier_kirchhoff} 
 \end{equation} \cite{TZEP}
 
-kde T je teplota, $\lambda$ tepelná vodivost, $\rho$ měrná hmotnost, 
+kde $T$ je teplota, $\lambda$ tepelná vodivost, $\rho$ měrná hmotnost, $c$ měrná tepelná kapacita a   $P_J$ měrné Jouleovy ztráty.
+
+Jouleovy ztráty, jsou ztráty vzniklé tepelnými účinky vířivých proudů a jsou definovány pomocí Jouleova zákona, který je ve znění:
+
+\begin{equation}
+	p_{J}=\frac{||\vec{J}_{v}||^{2}}{\gamma}
+	\label{joule_ztraty} 
+\end{equation} 
+
+V dalším kroku se rozloží úplná derivace T vyskytující se v rovnici(\ref{fourier_kirchhoff}) na parciální derivace podle jednotlivých složek souřadného systému, v tomto případě osově symetrického souřadného systému:
+
+\begin{equation}
+	p_{J}=\frac{||\vec{J}_{v}||^{2}}{\gamma}
+	\label{joule_ztraty} 
+\end{equation}

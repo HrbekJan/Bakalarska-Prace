@@ -9,6 +9,7 @@ Model magnetického pole je odvozen z Maxwellových rovnic pro stacionární pol
 	
 \begin{equation}
 	\rot \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t}
+	\label{amperuv_zakon}
 \end{equation}
 
 kde \vec{H} je vektor intenzity magnetického pole, \vec{J} je vektor proudové hustoty a $\frac{\partial \vec{D}}{\partial t}$ je hustota posuvného proudu. Hustotu posuvného proudu lze zanedbat, z důvodu zanedbatelné velikosti $\varepsilon$ oproti $\gamma$. Protože $\vec{J} =\gamma \vec{E} $ a $\vec{D} =\varepsilon \vec{E} $, lze předpokládat, že pokud bude $\gamma$ daleko větší než $\varepsilon$, lze člen $\frac{\partial \vec{D}}{\partial t}$ zanedbat. Ve skutečnosti je opravdu $\gamma$ daleko větší než $\varepsilon$ a proto bude člen s parciální derivací zanedbán.
@@ -28,7 +29,8 @@ Dalším krokem je dosazení za intenzitu magnetického pole \vec{H} ze vztahu m
 Jelikož cílem odvozování matematického modelu problému je převedení veličin charakteristických pro elektromagnetické pole na potenciály, v tomto případě na vektorový magnetický potenciál, byl použit vztah mezi \vec{B} a \vec{A}(\ref{magneticky_vektorovy_potencial}), tím se rovnice upraví na tvar:
 
 \begin{equation}
- \rot (\frac{1}{\mu} {rot \vec{A}}) = \vec{J}
+ 	\rot (\frac{1}{\mu} {rot \vec{A}}) = \vec{J}
+ 	\label{prvni_max_odvoz}
 \end{equation}
 
 Do tohoto momentu byl odvozován matematický model z 1. Maxwellovy rovnice, dále bude odvozována část z 2. Maxwellovy rovnice.
@@ -37,36 +39,42 @@ Do tohoto momentu byl odvozován matematický model z 1. Maxwellovy rovnice, dá
 
 \begin{equation}
 	\rot \vec{E} = - \frac{\partial \vec{B}}{\partial t}
+	\label{faradayuv_zakon}
 \end{equation}
 
 kde \vec{E} je intenzita elektrického pole. Opět je cílem převést z veličin charakteristických pro elektromagnetické pole na vektorový magnetický potenciál, proto je opět použit vztah (\ref{magneticky_vektorovy_potencial}) a tímto dojde ke změně tvaru rovnice:
 
 \begin{equation}
 	\rot \vec{E} = - \frac{\partial\rot\vec{A}}{\partial t}
+	\label{faradayuv_zakon_potencial}
 \end{equation}
 
 Ten lze upravit na tvar:
 
 \begin{equation}
 	\rot \vec{E} = - \rot \frac{\partial\vec{A}}{\partial t}
+	\label{faradayuv_zakon_potencial_rot}
 \end{equation}
 
 Odstraněním operátoru rotace vznikne konečný tvar rovnice pro intenzitu elektrického pole:
 
 \begin{equation}
 	\vec{E} = - \frac{\partial \vec{A}}{\partial t} - \grad{\varphi}
+	\label{faradayuv_zakon_potencial_bez_rot}
 \end{equation}
 
-Dosazením ze konstitutivního vztahu pro proudovou hustotu \vec{J} a intenzitu elektrického pole \vec{E} (\ref{gama}) do rovnice (2.8), lze tuto rovnici zapsat:
+Dosazením ze konstitutivního vztahu pro proudovou hustotu \vec{J} a intenzitu elektrického pole \vec{E} (\ref{gama}) do rovnice (\ref{faradayuv_zakon_potencial_bez_rot}), lze tuto rovnici zapsat:
 
 \begin{equation}
 	\vec{J} = - \gamma \frac{\partial \vec{A}}{\partial t} - \gamma \grad{\varphi}
+	\label{faradayuv_zakon_potencial_konstitutivni}
 \end{equation}
 
-kde $\gamma$ je konduktivita. V této chvíli lze rovnice (2.4) a (2.9) spojit, vznikne jedna rovnice ve tvaru:
+kde $\gamma$ je konduktivita. V této chvíli lze rovnice (\ref{prvni_max_odvoz}) a (\ref{faradayuv_zakon_potencial_konstitutivni}) spojit, vznikne jedna rovnice ve tvaru:
 
 \begin{equation}
 	\rot (\frac{1}{\mu} {rot \vec{A}}) = - \gamma \frac{\partial \vec{A}}{\partial t} - \gamma \grad{\varphi}
+	\label{matematicky_model_neupraveny}
 \end{equation}
 
 Dále lze provést úprava podle vztahů (\ref{gama}) a (\ref{intenzita_potencial}):
