@@ -1,8 +1,10 @@
+\newpage
+
 \section{Model teplotního pole}
 Teplo se v tomto problému šíří vedením, proto je pro popis teplotního pole použita rovnice pro vedení tepla neboli Fourier-Kirchhoffova rovnice. Tu lze zapsat ve tvaru:
 
 \begin{equation}
-	\div ( \lambda \grad T) = \rho c \frac{dT}{dt} - p_J 
+	\div ( \lambda  \grad T) = \rho c \frac{dT}{dt} - p_J 
 	\label{fourier_kirchhoff} 
 \end{equation} \cite{TZEP}
 
@@ -18,6 +20,35 @@ Jouleovy ztráty, jsou ztráty vzniklé tepelnými účinky vířivých proudů 
 V dalším kroku se rozloží úplná derivace T vyskytující se v rovnici(\ref{fourier_kirchhoff}) na parciální derivace podle jednotlivých složek souřadného systému, v tomto případě osově symetrického souřadného systému:
 
 \begin{equation}
-	p_{J}=\frac{||\vec{J}_{v}||^{2}}{\gamma}
-	\label{joule_ztraty} 
+	\frac{dT}{dt} =\frac{\partial T}{\partial t} + \frac{\partial T}{\partial r} \frac{d r}{d t} + \frac{\partial T}{\partial y} \frac{d y}{d t}
+	\label{rozklad_parcialni_derivace} 
 \end{equation}
+
+Časové derivace složek polohy lze podle znalostí z kinematiky nahradit složkami rychlosti, tedy $v_r$ a $v_y$. Z této znalosti, z rovnice (\ref{joule_ztraty}) a (\ref{rozklad_parcialni_derivace}) vyplývá, že upravená rovnic (\ref{fourier_kirchhoff}) bude mít takovýto tvar:
+
+\begin{equation}
+	\div ( \lambda  \grad T) = \rho c (\frac{\partial T}{\partial t} + \frac{\partial T}{\partial r} v_r + \frac{\partial T}{\partial y} v_y) - \frac{||\vec{J}_{v}||^{2}}{\gamma}
+	\label{fourier_kirchhoff_upraven} 
+\end{equation} 
+
+Dále lze upravit výraz zahrnující parciální derivace teploty T:
+
+\begin{equation}
+    \frac{\partial T}{\partial r} v_r + \frac{\partial T}{\partial y} v_y = \vec{v} \cdot \grad T
+	\label{gradient_teplota} 
+\end{equation} 
+
+Toto lze dosadit do rovnice (\ref{fourier_kirchhoff_upraven}):
+\begin{equation}
+	\div ( \lambda  \grad T) = \rho c (\frac{\partial T}{\partial t} + \vec{v} \cdot \grad T ) - \frac{||\vec{J}_{v}||^{2}}{\gamma}
+	\label{matematicky_model_teplotni_pole_rychlost} 
+\end{equation} 
+
+Dále lze vypustit člen s rychlostí, jelikož se nejedná o dynamický problém, ale pouze o statický problém, složky rychlosti a tedy i rychlost jako vektor je nulová. Po této úvaze lze zapsat rovnici ve tvaru:
+
+\begin{equation}
+	\div ( \lambda \grad T) = \rho c \frac{\partial T}{\partial t} - \frac{||\vec{J}_{v}||^{2}}{\gamma}
+	\label{matematicky_model_teplotni_pole} 
+\end{equation}
+
+Tato rovnice reprezuntuje matematický model teplotního pole.
