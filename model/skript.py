@@ -1,4 +1,5 @@
 gamma_c = 5714.28
+j_c = 6000
 mu_c = 1
 mu_a = 1
 mu_f = 1000
@@ -17,7 +18,7 @@ newdocument("rozlozeni_magnetickeho_pole_v_okoli_vzduchovych_tlumivek", "axisymm
 
 addboundary("A=0", "magnetic_vector_potential", 0, 0)
 
-addmaterial("cuprum", 0, 0, mu_c, gamma_c, 0, 0, 0, 0, 0)
+addmaterial("cuprum", j_c, 0, mu_c, gamma_c, 0, 0, 0, 0, 0)
 addmaterial("air", 0, 0, 1, 0, 0, 0, 0, 0, 0)
 addmaterial("fe", 0, 0, mu_f, gamma_f, 0, 0, 0, 0, 0)
 
