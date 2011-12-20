@@ -1,9 +1,9 @@
-gamma_c = 5714.28
-j_c = 6000
-mu_c = 1
-mu_a = 1
-mu_f = 1000
-gamma_f = 2000
+gamma_c = 5714.28		% zadani elektricke vodivosti medi
+j_c = 6000				% zadani proudove hustoty medi
+mu_c = 1				% zadani permeability medi
+mu_a = 1				% zadani permeability vzduchu
+mu_f = 1000				% zadani permeability zeleza
+gamma_f = 2000			% zadani elektricke vodivosti zeleza
 
 r_in = 1
 a = 0.3

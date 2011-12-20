@@ -17,24 +17,24 @@ Jouleovy ztráty, jsou ztráty vzniklé tepelnými účinky vířivých proudů 
 	\label{joule_ztraty} 
 \end{equation} 
 
-V dalším kroku se rozloží úplná derivace T vyskytující se v rovnici(\ref{fourier_kirchhoff}) na parciální derivace podle jednotlivých složek souřadného systému, v tomto případě osově symetrického souřadného systému:
+V dalším kroku se rozloží úplná derivace T vyskytující se v rovnici(\ref{fourier_kirchhoff}) na parciální derivace podle jednotlivých složek souřadného systému, v tomto případě válcového souřadného systému:
 
 \begin{equation}
-	\frac{dT}{dt} =\frac{\partial T}{\partial t} + \frac{\partial T}{\partial r} \frac{d r}{d t} + \frac{\partial T}{\partial y} \frac{d y}{d t}
+	\frac{dT}{dt} =\frac{\partial T}{\partial t} + \frac{\partial T}{\partial r} \frac{d r}{d t} + \frac{\partial T}{\partial \alpha} \frac{d \alpha}{d t} + \frac{\partial T}{\partial z} \frac{d z}{d t}
 	\label{rozklad_parcialni_derivace} 
 \end{equation}
 
-Časové derivace složek polohy lze podle znalostí z kinematiky nahradit složkami rychlosti, tedy $v_r$ a $v_y$. Z této znalosti, z rovnice (\ref{joule_ztraty}) a (\ref{rozklad_parcialni_derivace}) vyplývá, že upravená rovnic (\ref{fourier_kirchhoff}) bude mít takovýto tvar:
+Časové derivace složek polohy lze podle znalostí z kinematiky nahradit složkami vektoru rychlosti, tedy $v_r$, $v_\alpha$ a $v_z$. Z této znalosti, z rovnice (\ref{joule_ztraty}) a (\ref{rozklad_parcialni_derivace}) vyplývá, že upravená rovnic (\ref{fourier_kirchhoff}) bude mít takovýto tvar:
 
 \begin{equation}
-	\div ( \lambda  \grad T) = \rho c (\frac{\partial T}{\partial t} + \frac{\partial T}{\partial r} v_r + \frac{\partial T}{\partial y} v_y) - \frac{||\vec{J}_{v}||^{2}}{\gamma}
+	\div ( \lambda  \grad T) = \rho c (\frac{\partial T}{\partial t} + \frac{\partial T}{\partial r} v_r + \frac{\partial T}{\partial \alpha} v_\alpha + \frac{\partial T}{\partial z} v_z) - \frac{||\vec{J}_{v}||^{2}}{\gamma}
 	\label{fourier_kirchhoff_upraven} 
 \end{equation} 
 
 Dále lze upravit výraz zahrnující parciální derivace teploty T:
 
 \begin{equation}
-    \frac{\partial T}{\partial r} v_r + \frac{\partial T}{\partial y} v_y = \vec{v} \cdot \grad T
+    \frac{\partial T}{\partial t} + \frac{\partial T}{\partial r} v_r + \frac{\partial T}{\partial \alpha} v_\alpha + \frac{\partial T}{\partial z} v_z = \vec{v} \cdot \grad T
 	\label{gradient_teplota} 
 \end{equation} 
 
@@ -51,4 +51,4 @@ Dále lze vypustit člen s rychlostí, jelikož se nejedná o dynamický problé
 	\label{matematicky_model_teplotni_pole} 
 \end{equation}
 
-Tato rovnice reprezuntuje matematický model teplotního pole.
+Tato rovnice reprezentuje matematický model teplotního pole.
